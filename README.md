@@ -38,7 +38,7 @@ If you are preparing for **AZ-104** or **DP-900**, I highly recommend you to rea
 * **Web Tier:** Nginx, HTML, CSS, JavaScript, CertBot
 * **Version Control:** Git, GitHub
 * **AI:** Google Gemini, ChatGPT (For research and learning)
-* **Documentation:** Obsidian, Markdown, Draw.io
+* **Documentation:** Obsidian, Markdown, Draw.io, Flameshot
 
 ---
 ### Overall Experience
