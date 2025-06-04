@@ -51,7 +51,7 @@ sudo certbot --nginx -d thedeath.club -d www.thedeath.club
 
 ---
 
-4) Now, open up your browser and check again:
+4) **Now, open up your browser and check again:**
 
 Press on the "info" icon, to learn more about the connection the browser has set up with the web server. In our example. it's saying that the connection is now secure.
 
