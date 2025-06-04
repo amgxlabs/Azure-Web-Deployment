@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project The Death Club</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; background-color: #f4f4f4; color: #333; }
+        .container { background-color: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+        h1, h2 { color: #333; }
+        input[type="text"], button { padding: 10px; margin-bottom: 10px; border-radius: 4px; border: 1px solid #ddd; }
+        input[type="text"] { width: calc(100% - 22px); }
+        button { background-color: #5cb85c; color: white; cursor: pointer; border: none; }
+        button:hover { background-color: #4cae4c; }
+        #items div { background-color: #e9e9e9; padding: 10px; margin-bottom: 8px; border-radius: 4px; }
+        .error { color: red; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Submit a New Message</h1>
+        <input type="text" id="messageInput" placeholder="Enter your message here...">
+        <button onclick="submitMessage()">Submit Message</button>
+
+        <h2>Stored Messages</h2>
+        <div id="items"><p>Loading messages...</p></div>
+    </div>
+
+    <script>
+        // Prrivate IP of the App-VM
+        const apiUrl = 'http://10.0.2.4:5000/items'; 
+
+        async function fetchItems() {
+            const itemsDiv = document.getElementById('items');
+            itemsDiv.innerHTML = '<p>Loading messages...</p>';
+            try {
+                const response = await fetch(apiUrl);
+                if (!response.ok) {
+                    throw new Error(`HTTP error! Status: ${response.status} - ${response.statusText}`);
+                }
+                const items = await response.json();
+                itemsDiv.innerHTML = ''; // Clear loading message
+                if (items.length === 0) {
+                    itemsDiv.innerHTML = '<p>No messages yet. Be the first!</p>';
+                } else {
+                    items.forEach(item => {
+                        const div = document.createElement('div');
+                        div.textContent = `ID: ${item.id} | Message: ${item.content} (Added: ${new Date(item.created_at).toLocaleString()})`;
+                        itemsDiv.appendChild(div);
+                    });
+                }
+            } catch (error) {
+                console.error('Error fetching items:', error);
+                itemsDiv.innerHTML = `<p class="error">Error loading messages: ${error.message}. Check console and ensure API is reachable.</p>`;
+            }
+        }
+
+        async function submitMessage() {
+            const messageInput = document.getElementById('messageInput');
+            const message = messageInput.value.trim();
+
+            if (!message) {
+                alert('Please enter a message.');
+                return;
+            }
+
+            try {
+                const response = await fetch(apiUrl, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ message: message })
+                });
+
+                if (!response.ok) {
+                    const errorData = await response.json().catch(() => ({ detail: response.statusText })); // Try to get JSON error, fallback to statusText
+                    throw new Error(`HTTP error! Status: ${response.status} - ${errorData.error || errorData.detail}`);
+                }
+
+                // const newItem = await response.json(); // Not strictly needed if just confirming success
+                console.log('Message submitted successfully');
+                messageInput.value = ''; // Clear input field
+                fetchItems(); // Refresh the list of items
+            } catch (error) {
+                console.error('Error submitting message:', error);
+                alert(`Failed to submit message: ${error.message}`);
+            }
+        }
+
+        // Initial load of items when the page is ready
+        document.addEventListener('DOMContentLoaded', fetchItems);
+    </script>
+</body>
+</html>
