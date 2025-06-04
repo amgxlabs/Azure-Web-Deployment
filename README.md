@@ -1,7 +1,7 @@
 # Azure Multi-Tier Web Deployment
 ### Overview
 
-This is my personal end-to-end documentation of delpoying a live Website on the Azure infastructure along with APIs and Database. You can follow along this guide and build you own Website or Web-Server, as this documents includes screenshots of each step and detailed explanation on how things are working. 
+This is my personal end-to-end documentation of delpoying a live Website on the Azure infrastructure along with APIs and Database. You can follow along this guide and build you own Website or Web-Server, as this documents includes screenshots of each step and detailed explanation on how things are working. 
 
 **If you are preparing for AZ-104 or DP-900, I highly recommend you to read it because this project was part of my preperation for AZ-104. It covers various concepts of Azure.**
 
