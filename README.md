@@ -1,5 +1,4 @@
 # Azure Multi-Tier Web Deployment
----
 ### Overview
 
 This is my personal end-to-end documentation of delpoying a live Website on the Azure infastructure along with APIs and Database. You can follow along this guide and build you own Website or Web-Server, as this documents include screenshots of each step and detailed explanation on how things are working. 
@@ -9,7 +8,9 @@ This is my personal end-to-end documentation of delpoying a live Website on the 
 ---
 ### Architecture
 
-![[Architecture.png]]
+<p align="center">
+  <img src="./Web-Deployment/screenshots/Phase-2.4-Final-test/Architecture.PNG" width="600">
+</p>
 
 ---
 ### Requirements
