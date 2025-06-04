@@ -31,7 +31,7 @@ This is my personal end-to-end documentation of delpoying a live Website on the 
 * **Azure Services:** Azure Bastion, Azure Public IP, Azure DNS
 * **Database Tier:** MySQL Server
 * **Application Tier:** Node.js, Express.js
-* **Web Tier:** Nginx, HTML, CSS, JavaScript
+* **Web Tier:** Nginx, HTML, CSS, JavaScript, CertBot
 * **Version Control:** Git, GitHub
 * **AI:** Google Gemini, ChatGPT (For research and learning)
 * **Documentation:** Obsidian, Markdown, Draw.io
@@ -65,7 +65,7 @@ With the infrastructure in place, a simple 3-tier application was deployed.
     * [View Details](./Web-Deployment/2-%20Creating%20API.md)
 * **3. Web Server (Nginx & Frontend):** Setting up Nginx on the Web tier VM to serve a static HTML/JavaScript frontend and act as a reverse proxy to the App tier API.
     * [View Details](./Web-Deployment/3-%20Web-Server.md)
-* **4. Final Testing:** Ensuring the end-to-end application flow works as expected.
+* **4. Final Testing:** Ensuring the end-to-end application flow works as expected and installing certificates for secure connection.
     * [View Details](./Web-Deployment/4-%20Final%20Test.md)
 
 
