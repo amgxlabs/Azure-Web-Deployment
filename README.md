@@ -19,7 +19,7 @@ This is my personal end-to-end documentation of delpoying a live Website on the 
 - Basic Networking concepts: Virtual Networks, Subnets, Private vs Public IPs, Domain-names, TCP, SSH
 - Familiarity with Azure concepts: Network Security Groups (NSGs), Application Security Groups (ASGs), Priority, Bastion
 - Basic HTML, Javascript and MySql
-- IQ over 110 (you also need to put some effort)
+- IQ over 110 (you will have to put some effort)
 
 ---
 ### Technologies Used
@@ -35,13 +35,6 @@ This is my personal end-to-end documentation of delpoying a live Website on the 
 * **Version Control:** Git, GitHub
 * **AI:** Google Gemini, ChatGPT (For research and learning)
 * **Documentation:** Obsidian, Markdown, Draw.io
-
----
-### Application Code
-
-The simple application code developed for this project can be found here:
-* **App Tier (Node.js API):** [`./Web-Deployment/Application_code/app.js`](./Web-Deployment/Application_code/app.js)
-* **Web Tier (HTML/JS Frontend):** [`./Web-Deployment/Application_code/index_working.html`](index_working.html.md)
 
 ---
 ### Overall Experience
