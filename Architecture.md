@@ -20,13 +20,13 @@
 
 All VMs are deployed using **Ubuntu Server LTS** and **"Standard_B1s"** size for cost-effectiveness.
 
-- **Web-VM01:****
+- **Web-VM01:**
     - Serves web content and acts as a reverse proxy for the application tier API.
     - **Software:** Nginx.
-- **App-VM01:****
+- **App-VM01:**
     - Hosts the backend business logic via REST API.
     - **Software:** Node.js, npm, PM2, Express.js.
-- **DB-VM01:****
+- **DB-VM01:**
     - Hosts the MySQL database server.
     - **Software:** MySQL Server.
 
