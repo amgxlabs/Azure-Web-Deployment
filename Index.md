@@ -28,3 +28,13 @@ With the infrastructure in place, a simple 3-tier application was deployed.
     * [View Details](./Web-Deployment/3-%20Web-Server.md)
 * **4. Final Testing:** Ensuring the end-to-end application flow works as expected and installing certificates for secure connection.
     * [View Details](./Web-Deployment/4-%20Final%20Test.md)
+ 
+---
+
+### Application Code
+
+The simple application code developed for this project can be found here:
+* **App Tier (Node.js API):** [`./Web-Deployment/Application_code/app.js`](./Web-Deployment/Application_code/app.js)
+* **Web Tier (HTML/JS Frontend):** [`./Web-Deployment/Application_code/index_working.html`](index_working.html.md)
+
+---
