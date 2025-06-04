@@ -5,10 +5,10 @@ This is my personal end-to-end documentation of delpoying a live Website on the 
 
 **If you are preparing for AZ-104 or DP-900, I highly recommend you to read it because this project was part of my preperation for AZ-104. It covers various concepts of Azure.**
 
-**Before you begin with practical hands-on, Read the Basic-Concepts.md which covers the necessay theoretical part of this Project.**
+### Before you begin with practical hands-on, Read the **Basic-Concepts.md** which covers the necessay theoretical part of this Project.
 
 ---
-### Architecture
+### Architecture(High-level Overview)
 
 <p align="center">
   <img src="./Web-Deployment/screenshots/Phase-2.4-Final-test/Architecture.PNG" width="600">
